@@ -13,9 +13,9 @@ jobs:
     - uses: actions/checkout@v2
    
     - name: Install dotnet SDK
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '3.1.100'
+        dotnet-version: '6.x'
 
     - name: Try building my code
       run: dotnet build
