@@ -21,7 +21,7 @@ namespace CICD.Mvc.Controllers
         public IActionResult Index()
         {
 
-            return Index("1,2,3");
+            return Index("1,2,3, 7");
         }
 
         [HttpPost("input")]
