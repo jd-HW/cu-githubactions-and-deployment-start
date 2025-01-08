@@ -1,5 +1,4 @@
-name: my second workflow
-
+name: Build and tester
 on:
   push:
     branches: [ master, dev, devvy ]
@@ -12,7 +11,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line scrips
-      run: |
-        echo Add another action to build,
-        echo test, and depley your project
+
+    - name: Install dotnet SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.100'
+
+    - name: Try building my code
+      run: dotnet build
